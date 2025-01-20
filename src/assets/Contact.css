@@ -1,0 +1,149 @@
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .marquee-container {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    gap: 16px; /* Adjust the space between logos */
+  }
+  
+  @media (max-width: 1024px) {
+    .marquee-container {
+      animation: marquee 15s linear infinite; /* Faster scroll on smaller screens */
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .marquee-container {
+      animation: marquee 12s linear infinite; /* Even faster scroll on mobile */
+      gap: 8px; /* Reduced space on mobile */
+    }
+  }
+  
+/* Modern Parallax Effect */
+.modern-parallax {
+    position: relative;
+    background-image: url('9.jpg'); /* Replace with your desired background image */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 400px; /* Default height */
+    width: 100%;
+    z-index: 1; /* Keep the parallax effect on the background */
+    box-sizing: border-box;
+  }
+  
+  /* Overlay for Improved Text Visibility */
+  .modern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay for more contrast */
+    z-index: 0; /* Lower z-index to keep it behind the content */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background: transparent; /* Semi-transparent background for the newsletter */
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+    position: relative; /* Ensure proper positioning of elements inside */
+    width: 100%;
+    max-width: 500px; /* Max width for better control */
+    margin: 20px auto; /* Center the section */
+    z-index: 10; /* Ensure it's above the overlay */
+  }
+  
+  .newsletter-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    z-index: 10; /* Ensure the input is on top */
+    position: relative; /* Ensure the input is positioned above the overlay */
+    background-color: #fff; /* White background for the input */
+    color: #333; /* Dark text for readability */
+  }
+  
+  /* Ensure placeholder is visible */
+  .newsletter-input::placeholder {
+    color: #888; /* Gray color for the placeholder text */
+  }
+  
+  /* Button styling */
+  .newsletter-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    z-index: 10; /* Ensure the button is on top */
+    position: relative; /* Ensure the button is positioned above the overlay */
+  }
+  
+  .newsletter-button:hover {
+    background-color: #e5673f; /* Darker orange on hover */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .modern-parallax {
+      height: 300px; /* Reduce height for mobile screens */
+    }
+  
+    .newsletter-section {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modern-parallax {
+      height: 250px; /* Further reduce height for very small screens */
+    }
+  
+    .newsletter-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .newsletter-section p {
+      font-size: 1rem;
+    }
+  }
+  

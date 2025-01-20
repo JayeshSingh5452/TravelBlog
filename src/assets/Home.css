@@ -1,0 +1,423 @@
+/* Video Background */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 110vh; /* Increased height for more space */
+  overflow:hidden; /* Hide overflow */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  z-index: -1; /* Ensure the video stays in the background */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: rgba(249, 158, 9, 0.8); /* Your secondary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(249, 158, 9, 1); /* Hover effect */
+}
+
+/* Responsive for Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 2rem; /* Adjust text size for tablet */
+  }
+
+  .cta-button {
+    padding: 12px 25px; /* Adjust button size for tablet */
+  }
+
+  /* Fix sliding issue */
+  .video-container {
+    height: 100vh; /* Adjust height for smaller screens */
+  }
+}
+
+/* Responsive for Small Screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 1.5rem; /* Further adjust text size for small screens */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Further adjust button size */
+  }
+
+  /* Fix sliding issue */
+  .video-container {
+    height: 100vh; /* Adjust height for smaller screens */
+  }
+}
+.about-us-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f99e09; /* Orange color */
+}
+
+/* About Us Section */
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  margin-top: -50px; /* Adjust for spacing after video */
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-us-image {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.about-us-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-us-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-text {
+    padding-left: 0;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .about-us-image {
+    max-width: 80%; /* Limit image size on smaller screens */
+    margin-bottom: 20px; /* Add margin to separate image from text */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-text h2 {
+    font-size: 2rem; /* Smaller heading for small screens */
+  }
+
+  .about-us-text p {
+    font-size: 1rem; /* Smaller text for small screens */
+  }
+}
+.explore-now-link {
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.explore-now-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #f99e09; /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Adds space above the button */
+}
+
+/* Hover effect */
+.explore-now-button:hover {
+  background-color: #f87e00; /* Darker shade for hover effect */
+}
+
+/* For small screens, adjust button size */
+@media (max-width: 768px) {
+  .explore-now-button {
+    padding: 10px 20px; /* Smaller padding for smaller screens */
+    font-size: 1rem; /* Smaller text for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-now-button {
+    padding: 8px 18px; /* Even smaller padding */
+    font-size: 0.9rem; /* Further adjust text size for small screens */
+  }
+}
+
+/* Modern Parallax Effect */
+.parallax {
+  position: relative;
+  background-image: url('8.jpg'); /* Replace with your desired background image */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 280px; 
+  width: 100%;
+  z-index: 1; /* Keep the parallax effect on the background */
+  box-sizing: border-box;
+}
+
+/* Overlay for Improved Text Visibility */
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for more contrast */
+  z-index: 0; /* Lower z-index to keep it behind the content */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Parallax Content Section */
+.parallax-content {
+  position: relative;
+  color: white;
+  z-index: 1; /* Ensure it's above the overlay */
+  text-align: center;
+  padding: 40px 20px; /* Add more padding to shift the content lower */
+}
+
+.parallax-content h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.parallax-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.parallax-content .tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.parallax-content .cta-button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.parallax-content .cta-button:hover {
+  background-color: #e5673f; /* Darker orange on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .parallax {
+    height: 250px; /* Reduced height for mobile screens */
+  }
+
+  .parallax-content h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .parallax-content p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .parallax-content .cta-button {
+    font-size: 1rem; /* Adjust button size */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax {
+    height: 200px; /* Further reduced height for very small screens */
+  }
+
+  .parallax-content h2 {
+    font-size: 1.5rem; /* Even smaller font size */
+  }
+
+  .parallax-content p {
+    font-size: 0.9rem; /* Even smaller font size */
+  }
+
+  .parallax-content .cta-button {
+    font-size: 0.9rem; /* Even smaller button font size */
+    padding: 8px 16px;
+  }
+}
+
+
+
+/* Modern Parallax Effect */
+.modern-parallax {
+  position: relative;
+  background-image: url('9.jpg'); /* Replace with your desired background image */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 400px; /* Default height */
+  width: 100%;
+  z-index: 1; /* Keep the parallax effect on the background */
+  box-sizing: border-box;
+}
+
+/* Overlay for Improved Text Visibility */
+.modern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for more contrast */
+  z-index: 0; /* Lower z-index to keep it behind the content */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background: transparent; /* Semi-transparent background for the newsletter */
+  padding: 40px;
+  border-radius: 8px;
+  color: white;
+  position: relative; /* Ensure proper positioning of elements inside */
+  width: 100%;
+  max-width: 500px; /* Max width for better control */
+  margin: 20px auto; /* Center the section */
+  z-index: 10; /* Ensure it's above the overlay */
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 300px;
+  z-index: 10; /* Ensure the input is on top */
+  position: relative; /* Ensure the input is positioned above the overlay */
+  background-color: #fff; /* White background for the input */
+  color: #333; /* Dark text for readability */
+}
+
+/* Ensure placeholder is visible */
+.newsletter-input::placeholder {
+  color: #888; /* Gray color for the placeholder text */
+}
+
+/* Button styling */
+.newsletter-button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  z-index: 10; /* Ensure the button is on top */
+  position: relative; /* Ensure the button is positioned above the overlay */
+}
+
+.newsletter-button:hover {
+  background-color: #e5673f; /* Darker orange on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .modern-parallax {
+    height: 300px; /* Reduce height for mobile screens */
+  }
+
+  .newsletter-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-parallax {
+    height: 250px; /* Further reduce height for very small screens */
+  }
+
+  .newsletter-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-section p {
+    font-size: 1rem;
+  }
+}
