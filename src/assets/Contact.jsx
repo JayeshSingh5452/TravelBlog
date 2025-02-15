@@ -6,6 +6,8 @@ import './Contact.css';
 // Contact component
 function Contact() {
   return (
+
+    
     <div>
       {/* Video Background */}
       <div className="relative w-full h-screen">

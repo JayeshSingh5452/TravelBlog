@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import videoFile from './s2.mp4';
-import './Destination.css';
+import './Destination.css'; 
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
 import ReactStars from 'react-rating-stars-component';
+import aboutImage from './pix.jpg'; // Correct path to your image
 
 const filters = [
   {
@@ -167,25 +168,31 @@ function Destination() {
    
 
       {/* About Us Section */}
-      <section className="about-us-container py-12 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
-          <div className="about-us-image flex-shrink-0 w-full lg:w-1/2">
-            <img src="http://localhost:5173/src/assets/pix.jpg" alt="About Us" className="w-full h-auto rounded-lg shadow-lg" />
-          </div>
-          <div className="about-us-text w-full lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">About Us</h2>
-            <p className="text-lg text-gray-600 mb-4">
-              We are a leading travel agency offering a wide range of services, from customized tours to group travel. With years of experience, we specialize in creating memorable and personalized travel experiences for our clients.
-            </p>
-            <p className="text-lg text-gray-600 mb-4">
-              Our team is dedicated to providing exceptional customer service and ensuring your travel plans are seamless and stress-free. Whether you're looking for an adventurous trip or a relaxing getaway, we are here to help you create your dream vacation.
-            </p>
-            <a href="/about" className="explore-now-link">
-              <button className="explore-now-button">Explore Now</button>
-            </a>
-          </div>
-        </div>
-      </section>
+           <section className="about-us-container">
+             <div className="about-us-content">
+               <div className="about-us-image">
+                 <img src={aboutImage} alt="About Us" />
+               </div>
+               <div className="about-us-text">
+                 <h2>About Us</h2>
+                 <p>
+                   We are a leading travel agency offering a wide range of services,
+                   from customized tours to group travel. With years of experience, we
+                   specialize in creating memorable and personalized travel experiences
+                   for our clients.
+                 </p>
+                 <p>
+                   Our team is dedicated to providing exceptional customer service and
+                   ensuring your travel plans are seamless and stress-free. Whether you're
+                   looking for an adventurous trip or a relaxing getaway, we are here to
+                   help you create your dream vacation.
+                 </p>
+                 <a href="/about" className="explore-now-link">
+                   <button className="explore-now-button" >Explore Now</button>
+                 </a>
+               </div>
+             </div>
+           </section>
       
       {/* Parallax Section */}
       <div className="parallax">

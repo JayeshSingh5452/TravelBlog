@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import './Book.css'; // Add your custom styles if needed
 import videoFile from './5.mp4';
-import './bbk.webp'
+import vv from'./bbk.webp'
 
 
 function Book() {
@@ -38,14 +38,14 @@ function Book() {
             </div>
           </div>
         </div>
-      </div>
+      </div>0
 
    {/* Book Now Section */}
 <div className="flex flex-wrap bg-gray-100 py-16 px-8">
   {/* Left Side: Image */}
   <div className="w-full md:w-1/2">
   <img
-    src="https://files.oaiusercontent.com/file-QvfzCjfzSfF5Si6sDsFN9H?se=2025-01-18T09%3A35%3A04Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dbc6ec6bb-19bc-4af8-88bf-cd1ed62611f9.webp&sig=xynCx4ValsbX4Nq17V4YHTq8eoFLUYXLPvTs/j%2BwlWA%3D" 
+    src={vv} 
     alt="Travel Destination"
     className="w-full max-h-[600px] object-cover rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
   />
