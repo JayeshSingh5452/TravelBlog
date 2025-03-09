@@ -8,7 +8,7 @@ import 'remixicon/fonts/remixicon.css';
 import '../index.css';
 
 const navigation = [
-  { name: 'Home', to: '/Home' },
+  { name: 'Home', to: '/' },
   { name: 'Destination', to: '/Destination' },
   { name: 'Contact', to: '/contact' },
   { name: 'Book', to: '/Book' }, 
